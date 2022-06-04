@@ -1,32 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 from textblob import TextBlob
-
-
-# In[8]:
-
 
 from flask import Flask
 
-
-# In[9]:
-
-
 from flask import render_template, request
 
-
-# In[10]:
-
-
 app = Flask(__name__)
-
-
-# In[11]:
-
 
 @app.route("/", methods =["GET", "POST"])
 def index():
@@ -38,16 +16,5 @@ def index():
     else:
         return(render_template("index.html", result="waiting.."))
 
-
-# In[ ]:
-
-
 if __name__ == "__main__":
     app.run()
-
-
-# In[ ]:
-
-
-
-
